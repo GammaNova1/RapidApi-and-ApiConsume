@@ -23,6 +23,7 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<IRoomDal, EfRoomDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 
+builder.Services.AddAutoMapper(typeof(StartupBase)); //?
 builder.Services.AddCors(opt=>
 {
 	opt.AddPolicy("OtelApiCors", opts =>
